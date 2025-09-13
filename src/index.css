@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* 让 dark: 前缀使用 .dark 类，而不是 prefers-color-scheme 媒体查询 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html { @apply h-full; }
+  body {
+    @apply min-h-screen bg-white text-zinc-900
+           dark:bg-zinc-900 dark:text-zinc-100
+           transition-colors;
+  }
+}
