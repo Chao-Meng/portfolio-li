@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar.jsx";import './App.css'
+import Home from "./Components/Home.jsx";
+import NavBar from "./Components/NavBar.jsx";
+import './App.css'
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -22,7 +24,10 @@ function App() {
      <BrowserRouter>
       <main className="min-h-screen mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-10
                        bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 transition-colors">
-      <Navbar dark={theme ==="dark"} setDark={setDark} />
+      <NavBar dark={theme ==="dark"} setDark={setDark} />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
       </main>
   </BrowserRouter>
     </>

@@ -1,11 +1,13 @@
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
  export default function Navbar({dark, setDark}){
     return(
         <nav className="sticky top-0 bg-white dark:bg-zinc-800/70 backdrop-blur shadow rounded-xl">
   <div className="mx-auto max-w-6xl px-4 flex items-center justify-between h-12">
   
-    <div className="font-bold text-lg">Kevin</div>
+    <div className="font-bold text-lg">
+      <Link href="/">Kevin</Link>
+      </div>
 
 
     <div className="flex gap-10">
